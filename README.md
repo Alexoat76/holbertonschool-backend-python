@@ -14,7 +14,7 @@
 Thank you for visiting this repository which contain projects for learning and practice *`Python`* for the ***`Back-End Specialization`*** curriculum at at `Holberton School`.
 
 <p align="center">
-  <img width="500"  
+  <img width="380"  
         src="https://www.polyu.edu.hk/its/-/media/department/its/events/2022/1/20220118-event_basic-python-afternoon.gif"
   >
 </p>
