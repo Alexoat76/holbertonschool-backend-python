@@ -13,7 +13,7 @@
 This project contains some tasks for learning how to use and implement *`Asynchronous Comprehensions / Generators`* in *Python* language.
 
 <p align="center">
-  <img width="500"
+  <img width="300"
         src="https://files.realpython.com/media/A-Complete-Walkthrough-of-Pythons-Asyncio_Watermarked.5b6b9a01fdc9.jpg"
   >
 </p>
@@ -31,13 +31,19 @@ This project contains some tasks for learning how to use and implement *`Asynchr
 
 ## About
 
+- **[PEP 530 – Asynchronous Comprehensions](https://intranet.hbtn.io/rltoken/92LFCh7ZO9-ousmsmxCcEw)**
+- **[What’s New in Python: Asynchronous Comprehensions / Generators](https://intranet.hbtn.io/rltoken/bOGIzGlugH-SxS3xuFDvEA)**
+- **[Type-hints for generators](https://intranet.hbtn.io/rltoken/Tk9Qhv_ZgzGdoQJJN0O20g)** 
+- How to write an asynchronous generator
+- How to use async comprehensions
+- How to type-annotate generators
 
 ## Resources :books:
 Read or watch:
 	
-[![M](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/80px-Google_2015_logo.svg.png)](https://www.google.com/search?q=python+concurrent+coroutines&oq=concurrent+coro&aqs=chrome.2.69i57j0i512j0i22i30l4j0i15i22i30.9365j0j15&sourceid=chrome&ie=UTF-8)
+[![M](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/80px-Google_2015_logo.svg.png)](https://www.google.com/search?q=Python+-+Async+Comprehension+gif&source=lmns&bih=929&biw=1903&hl=en&sa=X&ved=2ahUKEwi7g7CKhLr5AhWLA98KHfh4A4YQ_AUoAHoECAEQAA)
 
-[![M](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/70px-Logo_of_YouTube_%282015-2017%29.svg.png)](https://www.youtube.com/results?search_query=Coroutine+Concurrency+in+Python+3+with+asyncio)
+[![M](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/70px-Logo_of_YouTube_%282015-2017%29.svg.png)](https://www.youtube.com/results?search_query=Python+-+Async+Comprehension)
 
 ## Requirements
 ### General
@@ -72,14 +78,12 @@ Read or watch:
 
 ## Tasks
 
-+ [x] 0\. **The basics of async**
++ [x] 0\. **Async Generator**
 
-+ **[0-basic_async_syntax.py](./0-basic_async_syntax.py)**
++ **[0-async_generator.py](./0-async_generator.py)**
 
-Write an asynchronous coroutine that takes in an integer argument ( *` max_delay `* , with a default value of 10) named  *` wait_random `*  that waits for a random delay 
-between 0 and  *` max_delay `* (included and float value) seconds and eventually returns it.
-
-Use the   *` random `*   module.
+Write a coroutine called   *` async_generator `*   that takes no arguments. 
+The coroutine will loop 10 times, each time asynchronously wait 1 second, then yield a random number between 0 and 10. Use the   *` random `*   module.
 
 ```bash
 $ cat 0-main.py
@@ -87,16 +91,79 @@ $ cat 0-main.py
 
 import asyncio
 
-wait_random = __import__('0-basic_async_syntax').wait_random
+async_generator = __import__('0-async_generator').async_generator
 
-print(asyncio.run(wait_random()))
-print(asyncio.run(wait_random(5)))
-print(asyncio.run(wait_random(15)))
+async def print_yielded_values():
+    result = []
+    async for i in async_generator():
+        result.append(i)
+    print(result)
+
+asyncio.run(print_yielded_values())
 
 $ ./0-main.py
-9.034261504534394
-1.6216525464615306
-10.634589756751769
+[4.403136952967102, 6.9092712604587465, 6.293445466782645, 4.549663490048418, 4.1326571686139015, 
+9.99058525304903, 6.726734105473811, 9.84331704602206, 1.0067279479988345, 1.3783306401737838]
+
+```
+---
+
++ [x] 1\. **Async Comprehensions**
+
++ **[1-async_comprehension.py](./1-async_comprehension.py)**
+
+Import   *` async_generator `*   from the previous task and then write a coroutine called   *` async_comprehension `*   that takes no arguments. 
+The coroutine will collect 10 random numbers using an async comprehensing over   *` async_generator `*, then return the 10 random numbers.
+
+```bash
+$ cat 1-main.py
+#!/usr/bin/env python3
+
+import asyncio
+
+async_comprehension = __import__('1-async_comprehension').async_comprehension
+
+
+async def main():
+    print(await async_comprehension())
+
+asyncio.run(main())
+
+$ ./1-main.py
+[9.861842105071727, 8.572355293354995, 1.7467182056248265, 4.0724372912858575, 0.5524750922145316,
+8.084266576021555, 8.387128918690468, 1.5486451376520916, 7.713335177885325, 7.673533267041574]
+
+```
+---
+
++ [x] 2\. **Run time for four parallel comprehensions**
+
++ **[2-measure_runtime.py](./2-measure_runtime.py)**
+
+Import *` async_comprehension `* from the previous file and write a *` measure_runtime `* coroutine that will execute *` async_comprehension `* four times in parallel using *` asyncio.gather `*.
+*` measure_runtime `* should measure the total runtime and return it. <br>
+Notice that the total runtime is roughly 10 seconds, explain it to yourself.
+
+```bash
+$ cat 2-main.py
+#!/usr/bin/env python3
+
+import asyncio
+
+
+measure_runtime = __import__('2-measure_runtime').measure_runtime
+
+
+async def main():
+    return await(measure_runtime())
+
+print(
+    asyncio.run(main())
+)
+
+$ ./2-main.py
+10.021936893463135
+
 
 ```
 ---
