@@ -10,7 +10,7 @@
 
 # 0x02. Python - Async Comprehension
 
-This project contains some tasks for learning how to use and implement *`Asynchronous Comprehensions / Generators`* in *Python* language.
+This project contains some tasks for learning how to use and implement **`Asynchronous Comprehensions / Generators`** in *Python* language.
 
 <p align="center">
   <img width="300"
