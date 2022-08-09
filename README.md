@@ -8,14 +8,14 @@
 
 ---
 
-# Backend-JavaScript and TypeScript
+# Backend-Python
 <div style="text-align: justify">
 
-Thank you for visiting this repository which contain projects for learning and practice *`Python`* for the Back-End Specialization curriculum at at `Holberton School`.
+Thank you for visiting this repository which contain projects for learning and practice *`Python`* for the ***`Back-End Specialization`*** curriculum at at `Holberton School`.
 
 <p align="center">
-  <img width="300"  
-        src="https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_a_Back_End_Developer.jpg"
+  <img width="500"  
+        src="https://www.polyu.edu.hk/its/-/media/department/its/events/2022/1/20220118-event_basic-python-afternoon.gif"
   >
 </p>
 
@@ -47,12 +47,30 @@ The projects in this repository cover:
 ## General :page_with_curl:
 <div style="text-align: justify">
 
+- Allowed editors: *` vi `*, *` vim `*, *` emacs `*.  
+- All files will be interpreted on Ubuntu 20.04 LTS using *` python3 `*  (version 3.7)
+- All files should end with a new line
+- The first line of all files should be exactly  *` #!/usr/bin/env python3 `*
+- A `README.md` file, at the root of the folder of the project, is mandatory
+- Your code should use the  *` pycodestyle `*  style (version 2.5.)
+- All your files must be executable
+- The length of your files will be tested using  *` wc `*
+- All modules should have a documentation ( *` python3 -c 'print(__import__("my_module").__doc__)' `* )
+- All classes should have a documentation ( *` python3 -c 'print(__import__("my_module").MyClass.__doc__)' `* )
+- All functions (inside and outside a class) should have a documentation 
+( *` python3 -c 'print(__import__("my_module").my_function.__doc__)' `*  and  
+*` python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)' `* )
+- A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, <br>
+	class or method *(the length of it will be verified)*
+
 
 ## Projects 
 
 | Project | Description |
 | :--- | :---|
-| **[0x00. ES6 Basics](./0x00-ES6_basic)** | `ES6` Arrow functions, Spread operators, and Iterators |
+| **[0x00. Python - Variable Annotations](./0x00-python_variable_annotations)** | Typing and *`mypy`* libraries in Python |
+| **[0x01. Python - Async](./0x01-python_async_function)** | ***`Async IO`*** |
+| **[0x02. Python - Async Comprehension](./0x02-python_async_comprehension)** | Asynchronous Generators and Comprehensions |
   
 ---
 	
@@ -63,7 +81,7 @@ The projects in this repository cover:
 Work is owned and maintained by 
 	**`Alex Orland Arévalo Tribaldos`**  and credits for `group projects` are displayed in the respective `README.md` files.
 
-<3915@holbertonschool.com>
+<3915@holbertonstudents.com>
 	
 [![M](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/25px-Octicons-mark-github.svg.png)](https://github.com/Alexoat76)
 [![M](https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/Twitter_Bird.svg/25px-Twitter_Bird.svg.png)](https://twitter.com/aoarevalot)
