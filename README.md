@@ -11,7 +11,7 @@
 # Backend-Python
 <div style="text-align: justify">
 
-Thank you for visiting this repository which contain projects for learning and practice *`Python`* for the ***`Back-End Specialization`*** curriculum at at `Holberton School`.
+Thank you for visiting this repository which contain projects for learning and practice *`Python`* for the ***`Back-End Specialization`*** curriculum at `Holberton School`.
 
 <p align="center">
   <img width="380"  
