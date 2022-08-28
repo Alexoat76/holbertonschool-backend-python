@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 This module contains the first unit test
-for client.py file.
+for client.py.
 """
 
 import requests
