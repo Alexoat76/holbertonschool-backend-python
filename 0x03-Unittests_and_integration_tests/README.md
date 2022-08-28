@@ -13,7 +13,7 @@
 This project contains some tasks for learning how to use and implement **`unit test`** and **`integration tests`** in *Python* language.
 
 <p align="center">
-  <img width="200"
+  <img width="220"
         src="https://uploads.toptal.io/blog/image/91302/toptal-blog-image-1434578005589-4e6897ec04cc0b3c7075b9b011ee915c.gif"
   >
 </p>
