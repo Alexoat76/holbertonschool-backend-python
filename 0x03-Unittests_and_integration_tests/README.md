@@ -44,9 +44,9 @@ Integration tests will test interactions between every part of your code.
 
 Execute your tests with
 
-`
+```bash
 $ python -m unittest path/to/test_file.py
-`
+```
 
 ## Resources :books:
 Read or watch:
