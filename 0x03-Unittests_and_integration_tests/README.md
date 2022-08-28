@@ -78,7 +78,7 @@ Read or watch:
 * All functions and coroutines must be type-annotated.
 
 ## More Info
-## Required Files
+### Required Files:
 
 <details>
   <summary><h3>utils.py :floppy_disk:</h3></summary>
